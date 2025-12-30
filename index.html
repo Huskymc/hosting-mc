@@ -4,80 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DorszHost - Hosting Minecraft</title>
-  <style>
-    /* Prosty wbudowany CSS */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f3f4f6;
-      color: #333;
-    }
-    header {
-      background-color: #0077ff;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-    }
-    nav {
-      margin: 0;
-      padding: 10px;
-      text-align: center;
-      background-color: #005bbb;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 18px;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      padding: 20px;
-      text-align: center;
-    }
-    .button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #0077ff;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    .button:hover {
-      background-color: #005bbb;
-    }
-    footer {
-      margin-top: 30px;
-      padding: 10px;
-      text-align: center;
-      background-color: #333;
-      color: white;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>🐟 DorszHost - Hosting Minecraft</h1>
-    <p>Hosting serwera Minecraft w Twoich rękach!</p>
+    <h1>🐟 DorszHost</h1>
+    <p>Najlepszy darmowy hosting serwerów Minecraft!</p>
   </header>
   <nav>
-    <a href="#oferta">Oferta</a>
-    <a href="#kontakt">Kontakt</a>
-    <a href="#zamow-serwer">Zamów serwer</a>
+    <ul>
+      <li><a href="#oferta">Oferta</a></li>
+      <li><a href="#zamow">Zamów serwer</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
   </nav>
   <main>
-    <section>
-      <h2 id="oferta">Nasza oferta</h2>
-      <p>Od prostych serwerów aż po potężne maszyny dla dużych społeczności. Dostosuj swoją ofertę!</p>
-      <a href="#zamow-serwer" class="button">Zamów teraz</a>
+    <section id="oferta">
+      <h2>Nasza Oferta</h2>
+      <p>Dostosuj swój serwer Minecraft w prosty sposób!</p>
+      <ul>
+        <li>Serwery z 1GB, 2GB i 4GB RAM</li>
+        <li>Prosty panel zarządzania</li>
+        <li>99% bezawaryjności</li>
+      </ul>
     </section>
+    
+    <section id="zamow">
+      <h2>Zamów swój serwer Minecraft!</h2>
+      <form method="post" action="https://swój-backend-endpoint.com/create">
+        <label for="server-name">Nazwa serwera:</label>
+        <input type="text" id="server-name" name="server-name" placeholder="Podaj nazwę serwera" required>
+        
+        <label for="ram">Wybierz RAM:</label>
+        <select id="ram" name="ram" required>
+          <option value="1GB">1 GB RAM</option>
+          <option value="2GB">2 GB RAM</option>
+          <option value="4GB">4 GB RAM</option>
+        </select>
+
+        <label for="email">Twój email:</label>
+        <input type="email" id="email" name="email" placeholder="Podaj email kontaktowy" required>
+
+        <button type="submit">Zamów Teraz</button>
+      </form>
+    </section>
+    
     <section id="kontakt">
-      <h2 id="kontakt">Kontakt</h2>
-      <p>Masz pytania? Skontaktuj się z nami na Discordzie! 🐟</p>
+      <h2>Kontakt</h2>
+      <p>Masz pytania? Skontaktuj się z nami na Discordzie lub napisz email na <a href="mailto:kontakt@dorszhost.pl">kontakt@dorszhost.pl</a></p>
     </section>
   </main>
   <footer>
