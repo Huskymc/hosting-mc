@@ -1,111 +1,87 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DorszHub - Hosting Serwerów Minecraft</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-        body { background: #1a1a1a; color: #fff; }
-        header { background: #0d0d0d; padding: 20px; text-align: center; }
-        header h1 { color: #f39c12; }
-        nav { display: flex; justify-content: center; gap: 20px; background: #111; padding: 10px; }
-        nav a { color: #fff; text-decoration: none; font-weight: bold; }
-        nav a:hover { color: #f39c12; }
-        section { padding: 40px 20px; max-width: 1200px; margin: auto; }
-        .servers { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .server-card { background: #222; padding: 20px; border-radius: 10px; transition: transform 0.2s; }
-        .server-card:hover { transform: scale(1.05); }
-        .server-card h2 { color: #f39c12; margin-bottom: 10px; }
-        .server-card button { padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background: #f39c12; color: #111; font-weight: bold; }
-        .pricing { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-        .plan { background: #222; padding: 20px; border-radius: 10px; width: 250px; text-align: center; }
-        .plan h3 { color: #f39c12; margin-bottom: 10px; }
-        .plan p { margin-bottom: 10px; }
-        form { display: flex; flex-direction: column; gap: 10px; max-width: 500px; margin: auto; }
-        input, textarea { padding: 10px; border-radius: 5px; border: none; }
-        input[type="submit"] { background: #f39c12; color: #111; font-weight: bold; cursor: pointer; }
-        footer { text-align: center; padding: 20px; background: #111; margin-top: 40px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DorszHost - Hosting Minecraft</title>
+  <style>
+    /* Prosty wbudowany CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+      color: #333;
+    }
+    header {
+      background-color: #0077ff;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    nav {
+      margin: 0;
+      padding: 10px;
+      text-align: center;
+      background-color: #005bbb;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 18px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #0077ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .button:hover {
+      background-color: #005bbb;
+    }
+    footer {
+      margin-top: 30px;
+      padding: 10px;
+      text-align: center;
+      background-color: #333;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-
-<header>
-    <h1>DorszHub - Hosting Minecraft</h1>
-    <p>Stwórz swój serwer Minecraft w kilka sekund!</p>
-</header>
-
-<nav>
-    <a href="#servers">Serwery</a>
-    <a href="#pricing">Cennik</a>
-    <a href="#contact">Kontakt</a>
-</nav>
-
-<section id="servers">
-    <h2 style="text-align:center; margin-bottom:30px;">Dostępne serwery</h2>
-    <div class="servers">
-        <div class="server-card">
-            <h2>Serwer 1</h2>
-            <p>Wersja: 1.20.1</p>
-            <p>Gracze online: 50/100</p>
-            <button onclick="alert('Serwer włączony!')">Włącz</button>
-        </div>
-        <div class="server-card">
-            <h2>Serwer 2</h2>
-            <p>Wersja: 1.19.4</p>
-            <p>Gracze online: 20/50</p>
-            <button onclick="alert('Serwer włączony!')">Włącz</button>
-        </div>
-        <div class="server-card">
-            <h2>Serwer 3</h2>
-            <p>Wersja: 1.21</p>
-            <p>Gracze online: 80/100</p>
-            <button onclick="alert('Serwer włączony!')">Włącz</button>
-        </div>
-    </div>
-</section>
-
-<section id="pricing">
-    <h2 style="text-align:center; margin-bottom:30px;">Cennik</h2>
-    <div class="pricing">
-        <div class="plan">
-            <h3>Starter</h3>
-            <p>2 GB RAM</p>
-            <p>50 graczy</p>
-            <p>20 zł / miesiąc</p>
-            <button>Wybierz</button>
-        </div>
-        <div class="plan">
-            <h3>Pro</h3>
-            <p>4 GB RAM</p>
-            <p>100 graczy</p>
-            <p>40 zł / miesiąc</p>
-            <button>Wybierz</button>
-        </div>
-        <div class="plan">
-            <h3>Ultimate</h3>
-            <p>8 GB RAM</p>
-            <p>200 graczy</p>
-            <p>80 zł / miesiąc</p>
-            <button>Wybierz</button>
-        </div>
-    </div>
-</section>
-
-<section id="contact">
-    <h2 style="text-align:center; margin-bottom:30px;">Kontakt</h2>
-    <form onsubmit="alert('Wiadomość wysłana!'); return false;">
-        <input type="text" placeholder="Twoje imię" required>
-        <input type="email" placeholder="Twój email" required>
-        <textarea placeholder="Wiadomość" rows="5" required></textarea>
-        <input type="submit" value="Wyślij">
-    </form>
-</section>
-
-<footer>
-    <p>&copy; 2025 DorszHub. Wszelkie prawa zastrzeżone.</p>
-</footer>
-
+  <header>
+    <h1>🐟 DorszHost - Hosting Minecraft</h1>
+    <p>Hosting serwera Minecraft w Twoich rękach!</p>
+  </header>
+  <nav>
+    <a href="#oferta">Oferta</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="#zamow-serwer">Zamów serwer</a>
+  </nav>
+  <main>
+    <section>
+      <h2 id="oferta">Nasza oferta</h2>
+      <p>Od prostych serwerów aż po potężne maszyny dla dużych społeczności. Dostosuj swoją ofertę!</p>
+      <a href="#zamow-serwer" class="button">Zamów teraz</a>
+    </section>
+    <section id="kontakt">
+      <h2 id="kontakt">Kontakt</h2>
+      <p>Masz pytania? Skontaktuj się z nami na Discordzie! 🐟</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 DorszHost. Wszystkie prawa zastrzeżone.</p>
+  </footer>
 </body>
 </html>
-
